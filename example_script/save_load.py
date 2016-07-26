@@ -63,10 +63,26 @@ print('You can check the loaded variable using idldata.keys()')
 print('\nprint(idldata.keys())')
 print(idldata.keys())
 
-print('vel =',idldata['vel'])
+print('\nvel =',idldata['vel'])
 print('astrok =',idldata['astrok'])
 print('kui =',idldata['kui'])
 
-#Save Python binary file-------------------------------------------
+#Save Python binary file -------------------------------------
+np.savez('s_l.npz',arr1d=a,arr2d=b)
+dataz=np.load('s_l.npz')
+keyz=dataz.keys()
+
+print('\nload .npz binary file by using np.load')
+print('You can check the loaded variable using dataz.keys()')
+print('\nprint(dataz.keys())')
+print(keyz)
+
+print('\narr1d =',dataz[keyz[0]])
+print('arr2d =',dataz['arr2d'])
+
+
+
+
+
 
 
