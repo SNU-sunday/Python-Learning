@@ -35,9 +35,11 @@ import scipy as sp
 a=np.arange(101)
 b=np.arange(25)
 b=b.reshape((5,5))
+
+#Save ASCII text file---------------------------------------------
 np.savetxt('s_l.txt',b)
 
-
+#Load ASCII text file---------------------------------------------
 data=np.loadtxt('s_l.txt',skiprows=1)
 c,d,e,f,g=data.T
 print('\noriginal data \n',b)
@@ -53,5 +55,18 @@ print('\ndata type =',data2.dtype)
 print('data demension =',data2.shape)
 print('\n',data2['b1'],'\n', data2['b2'],'\n',
       data2['b3'],'\n', data2['b4'],'\n', data2['b5'])
+
+#Load idl save file----------------------------------------------
+idldata=sp.io.readsav('idlsave.sav')
+print('\nidl save file load by using sp.io.readsav')
+print('You can check the loaded variable using idldata.keys()')
+print('\nprint(idldata.keys())')
+print(idldata.keys())
+
+print('vel =',idldata['vel'])
+print('astrok =',idldata['astrok'])
+print('kui =',idldata['kui'])
+
+#Save Python binary file-------------------------------------------
 
 
