@@ -35,17 +35,20 @@ import scipy as sp
 a=np.arange(101)
 b=np.arange(25)
 b=b.reshape((5,5))
-
 np.savetxt('s_l.txt',b)
 
+
 data=np.loadtxt('s_l.txt',skiprows=1)
-print(data)
-type(data)
+print('\noriginal data \n',b)
+print('\ntxt load from np.loadtxt data \n', data)
+print('data type =',data.dtype)
+print('data demension =',data.shape)
 
 #even if txt file has string, it can be loaded autometically
-data2=np.genformtxt('s_l.txt',dtype=None,names=('b1','b2','b3','b4','b5'))
-type(data2)
-print(data2)
-print(b1, b2, b3, b4, b5)
+data2=np.genfromtxt('s_l.txt',dtype=None,names=('b1','b2','b3','b4','b5'))
+print('\ntxt load from np.genformtxt',data2)
+print('data type =',data2.dtype)
+print('data demension =',data2.shape)
+print(data2['b1'], data2['b2'], data2['b3'], data2['b4'], data2['b5'])
 
 
