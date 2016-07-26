@@ -39,16 +39,19 @@ np.savetxt('s_l.txt',b)
 
 
 data=np.loadtxt('s_l.txt',skiprows=1)
+c,d,e,f,g=data.T
 print('\noriginal data \n',b)
 print('\ntxt load from np.loadtxt data \n', data)
-print('data type =',data.dtype)
+print('\ndata type =',data.dtype)
 print('data demension =',data.shape)
+print('\n',c,'\n',d,'\n',e,'\n',f,'\n',g)
 
 #even if txt file has string, it can be loaded autometically
 data2=np.genfromtxt('s_l.txt',dtype=None,names=('b1','b2','b3','b4','b5'))
-print('\ntxt load from np.genformtxt',data2)
-print('data type =',data2.dtype)
+print('\ntxt load from np.genformtxt\n',data2)
+print('\ndata type =',data2.dtype)
 print('data demension =',data2.shape)
-print(data2['b1'], data2['b2'], data2['b3'], data2['b4'], data2['b5'])
+print('\n',data2['b1'],'\n', data2['b2'],'\n',
+      data2['b3'],'\n', data2['b4'],'\n', data2['b5'])
 
 
