@@ -1,7 +1,7 @@
 """
 FISS READ FRAME test
 
-If don't now how to use the fisspy.read package,
+If don't know how to use the fisspy.read package,
 please read the docstring of that module.
 
 """
@@ -36,3 +36,4 @@ divider=mkl(ax)
 cax=divider.append_axes("right",size='3%',pad=0.055)
 plt.colorbar(im,cax=cax,ticks=[1500,4000,7500])
 plt.show()
+
