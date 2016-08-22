@@ -102,10 +102,10 @@ plt.show()
 a=np.arange(25)
 b=a.reshape((5,5))-12
 fig=plt.figure(2,figsize=(16,10))
-im=plt.imshow(b,cmap=plt.cm.Greys_r,origin='lower')
+plt.imshow(b,cmap=plt.cm.Greys_r,origin='lower')
 plt.clim(-10,10)   # color bar limit
 plt.xticks([0,2,4],fontsize=20)
-plt.colorbar(im,ticks=[-10,0,10])
+plt.colorbar(ticks=[-10,0,10])
 plt.show()
 #You have to causion that python plot 2d array from left top to right bottom
 #But IDL plot 2d array from left bottom to top right
